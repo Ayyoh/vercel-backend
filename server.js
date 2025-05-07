@@ -17,6 +17,10 @@ app.use(cors({
     origin: 'http://localhost:5173'
 }))
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 app.use("/api/products", productRouter)
 
 if (process.env.NODE_ENV === "production") {
