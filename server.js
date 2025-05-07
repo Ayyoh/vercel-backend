@@ -14,7 +14,7 @@ const __dirname = path.resolve();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'https://vercel-frontend-gray-gamma.vercel.app/',
+    origin: 'https://vercel-frontend-psi-two.vercel.app/',
     methods: ["POST", "GET"],
     credentials: true
 }))
