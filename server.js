@@ -13,10 +13,8 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 
-const allowedOrigin = 'https://vercel-frontend-psi-two.vercel.app';
-
 app.use(cors({
-    origin: allowedOrigin,
+    origin: 'http://localhost:5173',
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
