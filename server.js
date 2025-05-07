@@ -23,13 +23,10 @@ app.get('/', (req, res) => {
 
 app.use("/api/products", productRouter)
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, '../frontend/dist')))
-
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "../frontend", "dist", "index.html"));
-    })
-} 
+app.get("/api", (req, res) => {
+    console.log(`Working`)
+    res.send(`Working`)
+})
 
 app.listen(process.env.PORT, () => {
     connectDB();
