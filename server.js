@@ -14,7 +14,7 @@ const __dirname = path.resolve();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'https://vercel-frontend-wwjs.onrender.com/',
+    origin: 'https://vercel-frontend-wwjs.onrender.com',
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
